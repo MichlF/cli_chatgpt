@@ -1,0 +1,19 @@
+[package]
+name = "rust_chatgpt_integration"
+version = "0.1.0"
+edition = "2021"
+authors = ["MichlF <email.de>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = { version = "^0.14", features = [
+    "full",
+] } # http library written in Rust
+dotenv = "0.15.0"
+hyper-tls = "^0.5" # OpenAI only exposes HTTPS and hyper doesn't support it out of the box
+tokio = { version = "1", features = ["full"] } # For asyncs
+serde = "^1" # for JSON
+serde_derive = "^1" # for JSON
+serde_json = "^1" # for JSON
+spinners = "^4" # Creates CLI spinners for better looks
